@@ -1,9 +1,9 @@
 import React from "react";
-import classes from "./Personal.module.css";
-import CustomButton from "../UI/Button/CustomButton";
-import { pageActions } from "../../store/page-slice";
 import { useDispatch, useSelector } from "react-redux";
+import classes from "./Personal.module.css";
+
 import { personalActions } from "../../store/personal-slice";
+
 const Personal = () => {
   const { name, email, phone, nameValid, emailValid, phoneValid } = useSelector(
     (state) => state.personal
@@ -13,14 +13,6 @@ const Personal = () => {
 
   const dispatch = useDispatch();
 
-  const onSubmitHandler = (e) => {
-    e.preventDefault();
-    if (nameValid.validity && phoneValid.validity && emailValid.validity) {
-      dispatch(pageActions.goToPlan());
-    } else {
-      dispatch(personalActions.setError());
-    }
-  };
   const onChangeHandler = (e) => {
     if (e.target.id === "name") {
       dispatch(personalActions.updateName(e.target.value));
@@ -41,7 +33,7 @@ const Personal = () => {
           Please provide your name, email address, and phone number.
         </div>
       </div>
-      <form onSubmit={onSubmitHandler}>
+      <form>
         <div className={classes.inputWrapper}>
           <div className={classes.label}>
             <label htmlFor="name">Name</label>
@@ -61,7 +53,6 @@ const Personal = () => {
             type="text"
           />
         </div>
-
         <div className={classes.inputWrapper}>
           <div className={classes.label}>
             <label htmlFor="email">Email Address</label>
@@ -99,9 +90,6 @@ const Personal = () => {
             id="number"
             type="text"
           />
-        </div>
-        <div className={classes.btnWrapper}>
-          <CustomButton>Next Step</CustomButton>
         </div>
       </form>
     </div>

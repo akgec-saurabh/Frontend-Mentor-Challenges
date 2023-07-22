@@ -1,7 +1,5 @@
 .container {
   padding: 20px 80px;
-  height: 568px;
-  width: 640px;
   position: relative;
   font-size: inherit;
   font-family: inherit;
@@ -44,16 +42,6 @@
   background-color: var(--Magnolia);
 }
 
-.btnWrapper {
-  width: 100%;
-  position: absolute;
-  bottom: 0px;
-  right: 0px;
-  display: flex;
-  justify-content: space-between;
-  padding: 20px 80px;
-}
-
 .dataWrapper {
   margin-top: 50px;
 }
@@ -70,4 +58,35 @@
 .price,
 .free {
   margin-top: 5px;
+}
+
+@media (max-width: 720px) {
+  .container {
+    padding: 20px 20px;
+    border-radius: 10px;
+    /* overflow: hidden; */
+    background-color: var(--White);
+    position: absolute;
+    top: 80px;
+    left: 0px;
+    margin: 20px;
+    width: calc(100% - 40px);
+    box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
+    height: max-content;
+  }
+
+  .planWrapper {
+    flex-direction: column;
+  }
+
+  .plan {
+    flex-direction: row;
+    align-items: center;
+    justify-content: unset;
+  }
+
+  .dataWrapper {
+    margin-top: unset;
+    margin-left: 15px;
+  }
 }

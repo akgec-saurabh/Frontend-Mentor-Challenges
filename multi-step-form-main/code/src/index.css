@@ -68,3 +68,9 @@ h1 {
 .desc {
   color: var(--Cool-gray);
 }
+
+@media (max-width: 720px) {
+  body {
+    align-items: flex-start;
+  }
+}

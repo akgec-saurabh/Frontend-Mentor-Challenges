@@ -1,9 +1,23 @@
 .container {
-  background-image: url(../../images/bg-sidebar-desktop.svg);
-  background-size: cover;
   width: 274px;
   height: 568px;
   padding: 30px;
+  position: relative;
+}
+
+.imageWrapper {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 568px;
+  overflow: hidden;
+  border-radius: 10px;
+  /* object-fit: cover; */
+}
+
+.mobileBackground {
+  display: none;
 }
 
 .step {
@@ -12,6 +26,9 @@
   color: var(--White);
   align-items: center;
   cursor: pointer;
+  pointer-events: none;
+  position: relative;
+  z-index: 10;
 }
 
 .stepNum {
@@ -42,4 +59,41 @@
 .active {
   background-color: var(--Light-blue);
   color: #000;
+}
+
+/* ------------------------MEDIA QUERIES----------------- */
+
+@media (max-width: 720px) {
+  .container {
+    width: 100vw;
+    height: 172px;
+    display: flex;
+    justify-content: center;
+    padding: 0px;
+    overflow: hidden;
+    background-color: rebeccapurple;
+  }
+
+  .imageWrapper {
+    width: 100%;
+    overflow: visible;
+  }
+  .background {
+    display: none;
+  }
+  .mobileBackground {
+    width: 100%;
+    height: 172px;
+    display: block;
+    object-fit: cover;
+  }
+
+  .step {
+    justify-content: space-between;
+    align-items: unset;
+  }
+
+  .dataWrapper {
+    display: none;
+  }
 }

@@ -1,34 +1,15 @@
 import React from "react";
 import classes from "./Addons.module.css";
-import CustomButton from "../UI/Button/CustomButton";
 import { useDispatch, useSelector } from "react-redux";
 import { addonActions } from "../../store/addon-slice";
-import { pageActions } from "../../store/page-slice";
 import CheckBox from "../UI/CheckBox/CheckBox";
-const Addons = ({}) => {
+const Addons = () => {
   const billingMonthly = useSelector(
     (state) => state.billingType.billingMonthly
   );
   const addons = useSelector((state) => state.addon);
 
   const dispatch = useDispatch();
-
-  // const onChangeHandler = (e) => {
-  //   if (e.target.id === "online") {
-  //     dispatch(addonActions.onlineServiceActive());
-  //   } else if (e.target.id === "storage") {
-  //     dispatch(addonActions.largeStorageActive());
-  //   } else if (e.target.id === "profile") {
-  //     dispatch(addonActions.customProfileActive());
-  //   }
-  // };
-
-  const onGoBackHandler = () => {
-    dispatch(pageActions.goToPlan());
-  };
-  const onNextHandler = () => {
-    dispatch(pageActions.goToSummary());
-  };
 
   return (
     <div className={classes.container}>
@@ -104,12 +85,6 @@ const Addons = ({}) => {
             {billingMonthly ? "/mo" : "/yr"}
           </div>
         </div>
-      </div>
-      <div className={classes.btnWrapper}>
-        <CustomButton onClick={onGoBackHandler} other>
-          Go Back
-        </CustomButton>
-        <CustomButton onClick={onNextHandler}>Next Step</CustomButton>
       </div>
     </div>
   );

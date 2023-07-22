@@ -2,11 +2,23 @@ import React from "react";
 import { useSelector } from "react-redux";
 
 import classes from "./Sidebar.module.css";
+
+import background from "../../images/bg-sidebar-desktop.svg";
+import mobileBackground from "../../images/bg-sidebar-mobile.svg";
+
 const Sidebar = () => {
   const page = useSelector((state) => state.page.page);
 
   return (
     <div className={classes.container}>
+      <div className={classes.imageWrapper}>
+        <img className={classes.background} src={background} alt="" />
+        <img
+          className={classes.mobileBackground}
+          src={mobileBackground}
+          alt=""
+        />
+      </div>
       <div className={classes.step}>
         <div
           className={`${classes.stepNum} ${

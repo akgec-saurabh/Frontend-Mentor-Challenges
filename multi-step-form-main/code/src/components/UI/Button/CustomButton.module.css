@@ -6,7 +6,7 @@
   background-color: var(--Marine-blue);
   border: none;
   outline: none;
-  border-radius: 10px;
+  border-radius: 5px;
   width: max-content;
   cursor: pointer;
 }
@@ -31,4 +31,16 @@
 
 .confirm:hover {
   background-color: var(--Cool-gray);
+}
+
+.hide {
+  /* display: none; */
+  visibility: hidden;
+  pointer-events: none;
+}
+
+@media (max-width: 375px) {
+  .btn {
+    padding: 15px 15px;
+  }
 }

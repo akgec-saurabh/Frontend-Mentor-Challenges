@@ -5,4 +5,30 @@
   padding: 15px;
   background-color: var(--White);
   border-radius: 20px;
+  width: max-content;
+  position: relative;
+}
+
+.mainWrapper {
+  width: 640px;
+  height: 568px;
+  position: relative;
+}
+
+/* ------------------------MEDIA QUERIES----------------- */
+
+@media (max-width: 720px) {
+  .App {
+    display: block;
+    border-radius: 0px;
+    padding: 0px;
+    position: relative;
+    background-color: transparent;
+    height: 100vh;
+  }
+
+  .mainWrapper {
+    width: 100%;
+    position: unset;
+  }
 }

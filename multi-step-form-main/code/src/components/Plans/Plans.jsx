@@ -1,11 +1,9 @@
 import React from "react";
 import classes from "./Plans.module.css";
-import CustomButton from "../UI/Button/CustomButton";
 import arcade from "../../images/icon-arcade.svg";
 import advanced from "../../images/icon-advanced.svg";
 import pro from "../../images/icon-pro.svg";
 import { useDispatch, useSelector } from "react-redux";
-import { pageActions } from "../../store/page-slice";
 import Toggle from "../UI/Toggle/Toggle";
 import { billingTypeAction } from "../../store/billingType-slice";
 import { planActions } from "../../store/plan-slice";
@@ -31,13 +29,6 @@ const Plans = () => {
     dispatch(planActions.proActive());
   };
 
-  const onNextHandler = () => {
-    dispatch(pageActions.goToAddons());
-  };
-
-  const onGoBackHandler = () => {
-    dispatch(pageActions.goToInfo());
-  };
   return (
     <div className={classes.container}>
       <div className="mainHeader">
@@ -61,8 +52,10 @@ const Plans = () => {
                 : plans.arcade.yearlyValue}
               {billingMonthly ? "/mo" : "/yr"}
             </div>
+            {!billingMonthly && (
+              <div className={classes.free}>2 months free</div>
+            )}
           </div>
-          {!billingMonthly && <div className={classes.free}>2 months free</div>}
         </div>
         <div
           onClick={onClickAdvancedHandler}
@@ -104,12 +97,6 @@ const Plans = () => {
       </div>
 
       <Toggle toggle={billingMonthly} onClick={onChangeHandler} />
-      <div className={classes.btnWrapper}>
-        <CustomButton onClick={onGoBackHandler} other>
-          Go Back
-        </CustomButton>
-        <CustomButton onClick={onNextHandler}>Next Step</CustomButton>
-      </div>
     </div>
   );
 };

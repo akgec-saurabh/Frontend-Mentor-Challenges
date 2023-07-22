@@ -1,8 +1,6 @@
 import React, { useEffect } from "react";
 import classes from "./Summary.module.css";
 import { useDispatch, useSelector } from "react-redux";
-import { pageActions } from "../../store/page-slice";
-import CustomButton from "../UI/Button/CustomButton";
 import { billingTypeAction } from "../../store/billingType-slice";
 
 const Summary = () => {
@@ -13,13 +11,6 @@ const Summary = () => {
     (state) => state.billingType.billingMonthly
   );
   const dispatch = useDispatch();
-
-  const onGoBackHandler = () => {
-    dispatch(pageActions.goToAddons());
-  };
-  const onConfirmHandler = () => {
-    dispatch(pageActions.goToThankYou());
-  };
 
   const getTotal = () => {
     let total = 0;
@@ -133,14 +124,6 @@ const Summary = () => {
             {billingMonthly ? "/mo" : "/yr"}
           </div>
         </div>
-      </div>
-      <div className={classes.btnWrapper}>
-        <CustomButton onClick={onGoBackHandler} other>
-          Go Back
-        </CustomButton>
-        <CustomButton confirm onClick={onConfirmHandler}>
-          Confirm
-        </CustomButton>
       </div>
     </div>
   );

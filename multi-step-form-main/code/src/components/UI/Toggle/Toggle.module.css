@@ -1,0 +1,43 @@
+.mainContainer {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  width: 100%;
+  background-color: var(--Magnolia);
+  padding: 10px;
+  border-radius: 5px;
+  margin-top: 40px;
+}
+
+.monthly,
+.yearly {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--Cool-gray);
+}
+
+.active {
+  color: inherit;
+}
+
+.container {
+  background-color: var(--Marine-blue);
+  width: 45px;
+  border-radius: 20px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 4px;
+  cursor: pointer;
+}
+
+.toggle {
+  justify-content: flex-end;
+}
+
+.circle {
+  width: 15px;
+  height: 15px;
+  background-color: var(--White);
+  border-radius: 50%;
+}

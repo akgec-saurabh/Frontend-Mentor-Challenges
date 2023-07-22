@@ -1,0 +1,16 @@
+.container {
+  width: 20px;
+  height: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  overflow: hidden;
+  border: 1px solid var(--Light-gray);
+  cursor: pointer;
+}
+
+.active {
+  background-color: var(--Purplish-blue);
+  border: none;
+}

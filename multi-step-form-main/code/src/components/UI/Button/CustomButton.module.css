@@ -1,0 +1,34 @@
+.btn {
+  padding: 15px 25px;
+  font-size: inherit;
+  font-family: inherit;
+  color: var(--White);
+  background-color: var(--Marine-blue);
+  border: none;
+  outline: none;
+  border-radius: 10px;
+  width: max-content;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: var(--Purplish-blue);
+}
+
+.other {
+  background-color: var(--White);
+  color: var(--Cool-gray);
+}
+
+.other:hover {
+  background-color: var(--White);
+  color: var(--Marine-blue);
+}
+
+.confirm {
+  background-color: var(--Purplish-blue);
+}
+
+.confirm:hover {
+  background-color: var(--Cool-gray);
+}

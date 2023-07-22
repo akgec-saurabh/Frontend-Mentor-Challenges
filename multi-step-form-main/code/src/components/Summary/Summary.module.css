@@ -1,0 +1,67 @@
+.container {
+  padding: 20px 80px;
+  height: 568px;
+  width: 640px;
+  position: relative;
+  font-size: inherit;
+  font-family: inherit;
+  color: var(--Marine-blue);
+}
+.btnWrapper {
+  width: 100%;
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 80px;
+}
+
+.plans {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--Light-gray);
+}
+
+.billing div:first-child,
+.price {
+  font-weight: 500;
+}
+
+.change {
+  text-decoration: underline;
+  color: var(--Cool-gray);
+  cursor: pointer;
+}
+
+.addons {
+  margin-top: 20px;
+}
+
+.addonWrapper {
+  margin: 20px 0px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 14px;
+}
+
+.addonWrapper div:first-child,
+.total {
+  color: var(--Cool-gray);
+  font-size: 14px;
+}
+
+.total {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 50px;
+}
+
+.totalPrice {
+  font-size: 18px;
+  color: var(--Purplish-blue);
+  font-weight: 600;
+}

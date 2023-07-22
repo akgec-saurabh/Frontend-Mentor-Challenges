@@ -1,0 +1,61 @@
+.container {
+  padding: 20px 80px;
+  height: 568px;
+  width: 640px;
+  position: relative;
+}
+
+.container form {
+  display: flex;
+  flex-direction: column;
+}
+
+.inputWrapper {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.inputWrapper label input {
+  display: block;
+}
+
+.inputWrapper label {
+  margin-bottom: 5px;
+  font-size: 14px;
+}
+
+.label {
+  display: flex;
+  justify-content: space-between;
+}
+
+.error {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--Strawberry-red);
+}
+
+.hidden {
+  display: none;
+}
+
+.inputWrapper input {
+  outline: none;
+  border: none;
+  border: 1px solid var(--Light-gray);
+  padding: 15px 10px;
+  font-size: inherit;
+  font-family: inherit;
+  border-radius: 10px;
+}
+
+.btnWrapper {
+  width: 100%;
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+  display: flex;
+  justify-content: flex-end;
+  padding: 20px 80px;
+}

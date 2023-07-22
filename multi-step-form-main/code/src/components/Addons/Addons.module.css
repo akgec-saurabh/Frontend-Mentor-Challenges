@@ -1,0 +1,62 @@
+.container {
+  padding: 20px 80px;
+  height: 568px;
+  width: 640px;
+  position: relative;
+  font-size: inherit;
+  font-family: inherit;
+  color: var(--Marine-blue);
+}
+
+.addOnWrapper {
+  width: 100%;
+}
+
+.addon {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid var(--Light-gray);
+  border-radius: 10px;
+  padding: 20px;
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+.addon:hover {
+  border: 1px solid var(--Marine-blue);
+}
+
+.price {
+  color: var(--Purplish-blue);
+}
+
+.addonData {
+  margin-right: auto;
+  margin-left: 20px;
+}
+
+.text {
+  font-size: 14px;
+  color: var(--Cool-gray);
+}
+
+.btnWrapper {
+  width: 100%;
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 80px;
+}
+
+.active {
+  border: 1px solid var(--Marine-blue);
+  background-color: var(--Magnolia);
+}
+
+.head {
+  font-weight: 500;
+  margin: 2px 0px;
+}

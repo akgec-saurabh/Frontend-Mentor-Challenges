@@ -1,0 +1,55 @@
+.container {
+  outline: none;
+  border: none;
+  padding: 1.2rem;
+  margin: 1rem 0rem;
+  color: var(--white);
+  font-weight: 700;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  background-color: var(--dark-slate-grey);
+  font-size: inherit;
+  font-family: inherit;
+}
+
+.container:hover {
+  background: hsla(347, 100%, 66%, 1);
+
+  background: linear-gradient(
+    90deg,
+    hsla(347, 100%, 66%, 1) 0%,
+    hsla(4, 100%, 67%, 1) 100%
+  );
+
+  background: -moz-linear-gradient(
+    90deg,
+    hsla(347, 100%, 66%, 1) 0%,
+    hsla(4, 100%, 67%, 1) 100%
+  );
+
+  background: -webkit-linear-gradient(
+    90deg,
+    hsla(347, 100%, 66%, 1) 0%,
+    hsla(4, 100%, 67%, 1) 100%
+  );
+
+  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#FF5379", endColorstr="#FF6257", GradientType=1 );
+
+  box-shadow: 0px 19px 33px 0px rgba(255, 104, 65, 0.4);
+}
+
+.s {
+  width: 200px;
+}
+
+.m {
+  width: 300px;
+}
+
+.l {
+  width: 500px;
+}
+
+.max {
+  width: 100%;
+}
